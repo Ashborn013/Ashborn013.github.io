@@ -1,4 +1,3 @@
-"use client"
 export default function Home() {
   console.log("why are you here ?")
   return (<>
