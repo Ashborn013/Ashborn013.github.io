@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ashborn013.github.io
 
-## Getting Started
+<div align="center">
 
-First, run the development server:
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?style=for-the-badge&logo=github&logoColor=white)](https://pages.github.com/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+**A clean, minimalist personal space for cybersecurity research, CTF writeups, and software development notes.**
+
+[Live Site](https://ashborn013.github.io) • [Report Bug](https://github.com/ashborn013/ashborn013.github.io/issues)
+
+</div>
+
+---
+
+## 🛠️ Tech Stack
+This blog is built using modern static web technologies:
+* **Framework:** [Next.js](https://nextjs.org/) (App Router, Static HTML Export)
+* **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+* **Language:** [TypeScript](https://www.typescriptlang.org/)
+* **Hosting:** [GitHub Pages](https://pages.github.com/)
+* **CI/CD:** [GitHub Actions](https://github.com/features/actions)
+
+---
+
+## 📂 Project Structure
+```text
+ashborn013.github.io/
+├── .github/workflows/   # GitHub Actions automated deployment pipelines
+├── public/              # Static assets and icons
+├── src/
+│   └── app/            # Next.js App Router (Layouts & Pages)
+│       ├── globals.css  # Global Tailwind styles & customization variables
+│       ├── layout.tsx   # Root layout configuration (Fonts, Metadata)
+│       └── page.tsx     # Landing page (Under Construction)
+├── next.config.ts       # Next.js configurations (Static export setup)
+└── tsconfig.json        # TypeScript configuration options
 ```
 
+---
+
+## 🚀 Getting Started
+
+To run this project locally, make sure you have [Node.js](https://nodejs.org/) installed.
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/ashborn013/ashborn013.github.io.git
+cd ashborn013.github.io
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Run the development server
+```bash
+npm run dev
+```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 4. Build and export statically
+```bash
+npm run build
+```
+The static HTML export will be generated in the `/out` directory.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ⚙️ Deployment
+This project is configured with a automated GitHub Actions workflow to build and deploy to GitHub Pages on every push to the `main` branch. 
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The configuration resides in `.github/workflows/nextjs.yml` and utilizes Next.js's static HTML export mode.
